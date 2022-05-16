@@ -15,7 +15,7 @@ const TarotDetail = props => {
     >
       <Image
         maxH={{ sm: '200px', md: '370px' }}
-        src="tarot-fool.JPEG"
+        src={card.image}
         alt={card.name}
         mr={{ sm: '0', md: '30px' }}
         my={{ sm: '15px', md: '0' }}
