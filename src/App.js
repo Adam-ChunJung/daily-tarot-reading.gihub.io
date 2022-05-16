@@ -17,7 +17,13 @@ const theme = extendTheme({ breakpoints, fonts });
 function App() {
   return (
     <ChakraProvider theme={theme}>
-      <Flex w="100vw" h="100vh" align="center" justify="center" p="30px">
+      <Flex
+        w="100vw"
+        h="100vh"
+        align="center"
+        justify="center"
+        p={{ sm: '20px', md: '30px' }}
+      >
         <Flex
           direction="column"
           w={{ sm: '100%', md: '900px' }}
