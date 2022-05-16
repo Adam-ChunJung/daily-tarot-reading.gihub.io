@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/daily-tarot-reading.github.io/static/js/main.8b1ccff1.js",
+    "main.js": "/daily-tarot-reading.github.io/static/js/main.4d20a558.js",
     "index.html": "/daily-tarot-reading.github.io/index.html",
-    "main.8b1ccff1.js.map": "/daily-tarot-reading.github.io/static/js/main.8b1ccff1.js.map"
+    "main.4d20a558.js.map": "/daily-tarot-reading.github.io/static/js/main.4d20a558.js.map"
   },
   "entrypoints": [
-    "static/js/main.8b1ccff1.js"
+    "static/js/main.4d20a558.js"
   ]
 }
