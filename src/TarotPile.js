@@ -6,14 +6,25 @@ import { DUMMY_DATA } from './DUMMY_DATA';
 const TarotPile = () => {
   const emptyCards = [...Array(DUMMY_DATA.length + 1)];
   const [card, setCard] = useState();
+  const [isClicked, setIsClicked] = useState(true);
 
   const handleSelectCard = e => {
-    const selected = document.getElementById(e.target.id);
-    selected.style.cssText = 'opacity: 0; margin-top: -35px';
-    setTimeout(() => {
-      setCard(DUMMY_DATA[Math.floor(Math.random() * DUMMY_DATA.length)]);
-    }, 300);
+    if (isClicked === true) {
+      document.getElementById(e.target.id).style.marginTop = '-35px';
+      document.getElementById('beforeSelect').style.cssText =
+        'pointer-events: none; opacity: 0';
+
+      setIsClicked(false);
+
+      setTimeout(() => {
+        setCard(DUMMY_DATA[Math.floor(Math.random() * DUMMY_DATA.length)]);
+        setIsClicked(true);
+      }, 1500);
+    } else return;
   };
+
+  // const afterSelect = document.getElementById('afterSelect');
+  // afterSelect.style.opacity = 1;
 
   const handleRestart = () => {
     setCard();
@@ -23,7 +34,12 @@ const TarotPile = () => {
     <>
       {!card ? (
         <VStack>
-          <Flex justify="center" mt="50px" mb="20px" ml="56px">
+          <Flex
+            justify="center"
+            m="50px 0 20px 56px"
+            id="beforeSelect"
+            transition="1.5s ease-in-out"
+          >
             {emptyCards.map((el, index) => (
               <Box
                 ml="-56px"
