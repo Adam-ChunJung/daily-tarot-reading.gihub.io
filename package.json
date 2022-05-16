@@ -2,6 +2,7 @@
   "name": "tarot-daily",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://adam-chunjung.github.io/daily-tarot-reading.github.io",
   "dependencies": {
     "@chakra-ui/react": "^2.0.0",
     "@emotion/react": "^11.9.0",
@@ -10,6 +11,7 @@
     "@testing-library/react": "^13.2.0",
     "@testing-library/user-event": "^14.2.0",
     "framer-motion": "^6.3.3",
+    "gh-pages": "^4.0.0",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
     "react-icons": "^3.11.0",
@@ -20,7 +22,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
