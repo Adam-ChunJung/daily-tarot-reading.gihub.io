@@ -4,7 +4,7 @@ import { Image, Button, Text, Flex } from '@chakra-ui/react';
 const TarotDetail = props => {
   const card = props.selectedCard;
   const date = new Date().toLocaleDateString();
-  console.log(date);
+  console.log(card);
   return (
     <Flex
       direction={{ sm: 'column', md: 'row' }}
